@@ -1,0 +1,15 @@
+<!--pages/components/index/index.wxml-->
+<view class="index-page">
+  <view class='head'>组件拼装</view>
+  <view class="box">
+    <navigator class='list' url='/pages/components/pass_lattice/index'>
+      密码格子
+    </navigator> 
+    <navigator class='list' url='/pages/components/pass_lattice/index'>
+      密码格子
+    </navigator> 
+    <navigator class='list' url='/pages/components/pass_lattice/index'>
+      密码格子
+    </navigator> 
+  </view>
+</view>

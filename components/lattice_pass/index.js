@@ -18,7 +18,6 @@ Component({
         showNumber: false,//是否显示密码
         input_num:"",//输入框初始值
         height:"80",//输入框初始高度，
-        maxCount:8,//最大格子数
         focus: false,//输入框聚焦状态
       }
     }

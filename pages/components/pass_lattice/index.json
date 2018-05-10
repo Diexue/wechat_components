@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "pass":"/components/lattice_pass/index"
+  }
+}

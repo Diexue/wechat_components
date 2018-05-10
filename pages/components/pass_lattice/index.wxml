@@ -1,0 +1,4 @@
+<!--pages/components/pass_lattice/index.wxml-->
+<view class='pass-page'>
+  <pass id="pass"propData="{{passData}}"bindgetCode="getNumber"></pass>
+</view>

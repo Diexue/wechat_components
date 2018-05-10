@@ -1,0 +1,23 @@
+/* pages/components/index/index.wxss */
+page{
+  background: rgb(245,245,245)
+}
+.head{
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+}
+.box{
+   margin-top: 20rpx;
+}
+
+.list{
+  background: #fff;
+  padding:0 30rpx;
+  height: 90rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
