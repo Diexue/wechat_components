@@ -1,0 +1,9 @@
+/* pages/components/tab_head/index.wxss */
+page{
+  background: rgb(245, 245, 245)
+}
+.list{
+  margin: 20rpx 0;
+  background: #fff;
+  position: relative;
+}

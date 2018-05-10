@@ -1,0 +1,17 @@
+<!--导航栏组件-->
+ <scroll-view class='navBar'scroll-x style='height:{{propData.height}}rpx;line-height:{{propData.height}}rpx;font-size:{{propData.fontSize}}rpx;background:{{propData.bg}}'>
+    <view class='navBox'
+           wx:for="{{propData.data}}"
+           wx:index="index"
+           wx:key="{{index}}"
+           bindtap="_selectTopic"
+           data-index="{{index}}"
+           data-id="{{item.id}}"
+           style='color:{{selectIndex==index?propData.activeColor:propData.color}};'
+           >
+    {{item.name}}
+    </view>
+    <view wx:if="{{propData.showAdd}}" class='right-add'style='height:{{propData.height}}rpx;line-height:{{propData.height}}rpx;background:{{propData.add_bg}};color:{{propData.add_color}};fons-size:{{propData.add_fontSize}}rpx;'>
+      <view class='iconfont icon-add'>+</view>
+    </view>  
+  </scroll-view>

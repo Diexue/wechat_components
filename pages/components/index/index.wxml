@@ -5,8 +5,8 @@
     <navigator class='list' url='/pages/components/pass_lattice/index'>
       密码格子
     </navigator> 
-    <navigator class='list' url='/pages/components/pass_lattice/index'>
-      密码格子
+    <navigator class='list' url='/pages/components/tab_head/index'>
+      tab列表
     </navigator> 
     <navigator class='list' url='/pages/components/pass_lattice/index'>
       密码格子

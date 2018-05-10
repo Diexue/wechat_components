@@ -1,21 +1,21 @@
-// pages/components/pass_lattice/index.js
+// pages/components/tab_head/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    passData:{
-      amount:[1,1,1,1,1,1],
-      interval:false,
-      showNumber:true,
-      height:'88'
-    },
-    passData2: {
-      amount: [1, 1, 1, 1, 1, 1,1,1],
-      interval: true,
-      showNumber: false,
-      height: '80'
+    tabData:{
+      data: [
+        { name: "天机", id: 0 },
+        { name: "黄兵", id: 0 },
+        { name: "道君", id: 0 },
+        { name: "叶凡", id: 0 },
+        { name: "飞天", id: 0 },
+        { name: "圣墟", id: 0 },
+        { name: "遮天", id: 0 },
+      ],
+      activeColor:"red"
     }
   },
 
@@ -23,14 +23,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.pass=this.selectComponent('pass')
+    this.tab=this.selectComponent('tab')
   },
 
   /**
@@ -74,7 +74,7 @@ Page({
   onShareAppMessage: function () {
   
   },
-  getNumber(e){
-    console.log('code-->',e.detail.code)
+  selectItem(e){
+    console.log('item-->',e.detail.index)
   }
 })
