@@ -32,22 +32,22 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    set_focus(){
+    _set_focus(){
       this.setData({
         [focus]:true
       })
     },
-    get_focus(){
+    _get_focus(){
       this.setData({
         [focus_class]: true
       })
     },
-    blur(){
+    _blur(){
       this.setData({
         [focus_class]: false
       })
     },
-    getNumber(e){
+    _getNumber(e){
       let that = this;
       let val_arr = [];
       let current_arr = e.detail.value.replace(/\s+/g, "");//去掉空格

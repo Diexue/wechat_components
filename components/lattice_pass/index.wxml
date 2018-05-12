@@ -1,7 +1,7 @@
 <!--components/lattice_box/index.wxml-->
 <view class='box'>
   <view class='set_box {{propData.interval?"box_border_left":"box_border"}} {{propData.focus_class?"active":""}}'
-        style="height:{{propData.height?propData.height:initData.height}}rpx"catchtap="set_focus">
+        style="height:{{propData.height?propData.height:initData.height}}rpx"catchtap="_set_focus">
     <view class='set_list {{propData.focus_class?(propData.interval?"list_interval active":"list_nointerval active"):(propData.interval?"list_interval":"list_nointerval")}}'
           wx:for='{{propData.amount?propData.amount:initData.amount}}'wx:index="index">
       <view wx:if="{{val_length==index && propData.focus_class}}" class='cursor'></view> 
@@ -14,9 +14,9 @@
   <input class='input_container' 
           type='number'
           focus="{{initData.focus}}"
-          bindinput="getNumber"
-          bindfocus="get_focus"
-          bindblur="blur"></input>
+          bindinput="_getNumber"
+          bindfocus="_get_focus"
+          bindblur="_blur"></input>
 
           <view>{{propData.focus_class}}</view>
 </view>

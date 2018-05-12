@@ -7,7 +7,7 @@ Page({
   data: {
     tabData:{
       data: [
-        { name: "天机", id: 0 },
+        { name: "123", id: 0 },
         { name: "黄兵", id: 0 },
         { name: "道君", id: 0 },
         { name: "叶凡", id: 0 },
@@ -15,7 +15,8 @@ Page({
         { name: "圣墟", id: 0 },
         { name: "遮天", id: 0 },
       ],
-      activeColor:"red"
+      showAdd:true,
+      // activeColor:"green"
     }
   },
 
@@ -76,5 +77,8 @@ Page({
   },
   selectItem(e){
     console.log('item-->',e.detail.index)
+  },
+  addMore(e){
+    console.log('点击了add')
   }
 })

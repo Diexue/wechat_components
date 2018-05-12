@@ -1,17 +1,10 @@
 <!--导航栏组件-->
- <scroll-view class='navBar'scroll-x style='height:{{propData.height}}rpx;line-height:{{propData.height}}rpx;font-size:{{propData.fontSize}}rpx;background:{{propData.bg}}'>
-    <view class='navBox'
-           wx:for="{{propData.data}}"
-           wx:index="index"
-           wx:key="{{index}}"
-           bindtap="_selectTopic"
-           data-index="{{index}}"
-           data-id="{{item.id}}"
-           style='color:{{selectIndex==index?propData.activeColor:propData.color}};'
-           >
+ <scroll-view class='navBar'scroll-x style='height:{{propData.height?propData.height:initData.height}}rpx;line-height:{{propData.height?propData.height:initData.height}}rpx;font-size:{{propData.fontSize?propData.fontSize:initData.fontSize}}rpx;background:{{propData.bg?propData.bg:initData.bg}}'>
+    <view class='navBox'wx:for="{{propData.data?propData.data:initData.data}}"wx:index="index"wx:key="{{index}}"bindtap="_selectTopic"data-index="{{index}}"data-id="{{item.id}}"style='color:{{selectIndex==index?(propData.activeColor?propData.activeColor:initData.activeColor):(propData.color?propData.color:initData.color)}};background:{{selectIndex==index?(propData.activeBgColor?propData.activeBgColor:initData.activeBgColor):(propData.bgColor?propData.bgColor:initData.bgColor)}}'>
     {{item.name}}
     </view>
-    <view wx:if="{{propData.showAdd}}" class='right-add'style='height:{{propData.height}}rpx;line-height:{{propData.height}}rpx;background:{{propData.add_bg}};color:{{propData.add_color}};fons-size:{{propData.add_fontSize}}rpx;'>
+    <view wx:if="{{propData.showAdd}}"bindtap="_addMore" class='right-add'style='height:{{propData.height?propData.height:initData.height}}rpx;line-height:{{propData.height?propData.height:initData.height}}rpx;background:{{propData.add_bg?propData.add_bg:initData.add_bg}};color:{{propData.add_color?propData.add_color:initData.add_color}};font-size:{{propData.add_fontSize?propData.add_fontSize:initData.add_fontSize}}rpx;'>
       <view class='iconfont icon-add'>+</view>
-    </view>  
+    </view>
+
   </scroll-view>

@@ -1,7 +1,7 @@
 <!--pages/components/tab_head/index.wxml-->
 <view class='tab-page'>
   <view class='list'>
-    <tab id="tab"bindselectTopic="selectItem"></tab>
+    <tab id="tab"bindselectTopic="selectItem"bindaddMore="addMore" propData="{{tabData}}"></tab>
   </view>
   <!-- <view class='list'>
     <tab id="tab"propData="{{tabData}}"bindselectTopic="selectItem"></tab>

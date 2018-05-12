@@ -18,7 +18,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    getInfo(e){
+    _getInfo(e){
       console.log('ue',e)
       let userInfo=e.detail.userInfo;
       if(userInfo){
