@@ -1,0 +1,12 @@
+<!--components/quest_radio/index.wxml-->
+<radio-group bindchange="radioChange"data-id="{{propData.id}}">
+  <label class="radio-box" wx:for="{{propData.content}}" wx:key="{{item.value}}"wx:index="index">
+    <view class="radioAZ">
+        <radio value="{{index}}"checked="{{propChecked.checked}}"/> 
+        <view class='radio-btn {{item.checked?"selected":((propChecked.id==propData.id && propChecked.value==index)?"selected":"")}}'>
+              {{code[index]}}
+        </view>
+    </view>
+    <view class="ratio-text">{{item.name}}</view>
+  </label>
+</radio-group>

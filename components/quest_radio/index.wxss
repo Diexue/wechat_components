@@ -1,0 +1,29 @@
+/* components/quest_radio/index.wxss */
+
+.radio-box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.radioAZ{
+  width: 80rpx;
+}
+.radioAZ radio{
+  display: none;
+}
+.radio-btn{
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  border-radius: 50%;
+  background: #EFEFef;
+  text-align: center;
+}
+.ratio-text{
+  flex: 1;
+}
+.selected{
+  background: #81cb8f;
+  color: #fff;
+}

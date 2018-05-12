@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "qRadio": "/components/quest_radio/index",
+    "qcheckbox": "/components/quest_checkbox/index"
+  }
+}

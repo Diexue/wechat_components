@@ -4,5 +4,5 @@
   <view class='progress clearfix'style="height:{{propData.height?propData.height:initData.height}}rpx;border-radius:{{propData.radius?propData.radius:initData.radius}}rpx;background:{{propData.bgColor?propData.bgColor:initData.bgColor}};border:{{propData.border?propData.border:initData.border}}">
     <text class='pro-column'style="height:{{propData.height?propData.height:initData.height}}rpx;width:{{propData.percent?propData.percent:inintData.percent}}%;border-radius:{{propData.radius?propData.radius:initData.radius}}rpx;background:{{propData.activeColor?propData.activeColor:initData.activeColor}}"></text>
   </view>
-  <view class='pro-text' wx:if="{{propData.showPercent?propData.showPercent:initData.showPercent}}">{{propData.percent}}%</view>
+  <view class='pro-text' wx:if="{{propData.showPercent?propData.showPercent:initData.showPercent}}">{{propData.percent?propData.percent:initData.percent}}%</view>
 </view>

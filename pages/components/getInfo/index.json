@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "getInfo":"/components/get_userInfo/index"
+  }
+}

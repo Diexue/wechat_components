@@ -1,0 +1,16 @@
+<checkbox-group bindchange="checkboxChange"id="{{propData.id}}">
+  <label class="checkbox-box" wx:for="{{propData.content}}" wx:key="{{item.value}}"wx:index="index">
+    <view class="checkboxAZ">
+      <checkbox value="{{index}}"checked="{{propChecked.checked}}"/> 
+      <view class='checkbox-btn {{item.checked?"selected":((propChecked.id==propData.id && checkValue.getValue(propChecked.value,index))?"selected":"")}}'>{{code[index]}}</view>
+    </view>
+    <view class="checkbox-text">{{item.name}}</view>
+     <wxs module="checkValue">
+        var getValue=function(arr,index){
+          var bool=arr.indexOf(index.toString())!=-1
+          return bool
+        }
+      module.exports.getValue=getValue
+     </wxs> 
+  </label>
+</checkbox-group>

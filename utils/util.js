@@ -13,7 +13,18 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
-
+const countFormate = timeValue => {
+  let minute = parseInt(timeValue / 60);
+  let seconds = parseInt(timeValue % 60);
+  return formate(minute) + ":" + formate(seconds);
+}
+function formate(value) {
+  if (value < 10) {
+    value = `0${value}`
+  }
+  return value;
+}
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  countFormate
 }

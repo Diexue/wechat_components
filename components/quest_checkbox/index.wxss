@@ -1,0 +1,28 @@
+
+/* components/checkboxA/index.wxss */
+.checkbox-box{
+  display: flex;
+  margin-bottom: 20rpx;
+  align-items: center;
+}
+.checkboxAZ{
+  width: 80rpx;
+}
+.checkboxAZ checkbox{
+  display: none;
+}
+.checkbox-btn{
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  border-radius: 50%;
+  text-align: center;
+}
+.selected{
+  background: #81cb8f;
+  color: #fff;
+}
+.checkbox-text{
+  flex: 1;
+}

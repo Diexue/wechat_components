@@ -5,7 +5,9 @@
     "pages/api/index/index",
     "pages/components/pass_lattice/index",
     "pages/components/tab_head/index",
-    "pages/components/progress/index"
+    "pages/components/progress/index",
+    "pages/components/getInfo/index",
+    "pages/components/question/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

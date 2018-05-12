@@ -1,0 +1,4 @@
+<!--pages/components/getInfo/index.wxml-->
+<view class='get-page'>
+  <getInfo wx:if="{{showGetBtn}}" id="getInfo"bindgetUSerInfo="get_UserInfo"></getInfo>
+</view>

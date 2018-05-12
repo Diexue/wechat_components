@@ -3,13 +3,24 @@
   <view class='head'>组件拼装</view>
   <view class="box">
     <navigator class='list' url='/pages/components/pass_lattice/index'>
-      密码格子
+      <view class='iconfont icon-lock'></view>
+      <view class='list_text'>密码格子</view>
     </navigator> 
     <navigator class='list' url='/pages/components/tab_head/index'>
-      tab列表
+      <view class='iconfont icon-lock'></view>
+      <view class='list_text'>tab列表</view>
     </navigator> 
     <navigator class='list' url='/pages/components/progress/index'>
-      进度条
+     <view class='iconfont icon-lock'></view>
+      <view class='list_text'>进度条</view>
+    </navigator>
+    <navigator class='list' url='/pages/components/getInfo/index'>
+      <view class='iconfont icon-lock'></view>
+      <view class='list_text'>获取头像等信息</view>
+    </navigator>
+    <navigator class='list' url='/pages/components/question/index'>
+      <view class='iconfont icon-lock'></view>
+      <view class='list_text'>问答</view>
     </navigator> 
   </view>
 </view>

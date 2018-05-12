@@ -1,0 +1,21 @@
+<!--pages/components/question/index.wxml-->
+<view class='question-page'>
+  <view>耗时{{useTime}}-剩余{{remainTime}}-总时{{}}</view>
+  <view>{{(count+1)>=maxCount?maxCount:count+1}}/{{maxCount}}</view>
+  <view class='question'>{{count<maxCount?question[count].name:"请确认是否提交答案"}}</view>
+  <view class='answer'>
+    <qRadio id="qRadio"wx:if="{{question[count].type===1}}"propData="{{question[count]}}"propChecked="{{hasSelect}}"bind:selectData="selectData"></qRadio>
+    <qcheckbox id="qcheckbox"wx:if="{{question[count].type===2}}"propData="{{question[count]}}"propChecked="{{hasSelect}}"bind:selectData="selectData"></qcheckbox>
+  </view>
+  <view class='btn_box'>
+    <view class='btn_flex'>
+      <view class='btn'bindtap="lastQuestion">Previous</view>
+    </view>
+    <view class='btn_flex'wx:if="{{count<maxCount}}">
+      <view class='btn'bindtap="nextQuestion">Next</view>
+    </view>
+    <view class='btn_flex'wx:if="{{count===maxCount}}">
+      <view class='btn'bindtap="postAnswer">Post</view>
+    </view>
+  </view>
+</view>
