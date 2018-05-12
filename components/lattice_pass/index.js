@@ -63,7 +63,7 @@ Component({
         })
         console.log('look-->', this.data.val_length, val_arr, current_arr)
         if (val_length === len){
-          this.triggerEvent('getCode', { code: current_arr })
+          this.triggerEvent('getCode', { code: current_arr });//触发事件，及参数
         }
       }else {
         return;

@@ -22,7 +22,7 @@ Component({
       console.log('ue',e)
       let userInfo=e.detail.userInfo;
       if(userInfo){
-        this.triggerEvent("getUSerInfo", { userInfo: userInfo })
+        this.triggerEvent("getUSerInfo", { userInfo: userInfo });//触发事件，及参数
       }
     }
   }

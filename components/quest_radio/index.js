@@ -24,7 +24,7 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    radioChange: function (e) {
+    _radioChange: function (e) {
       // console.log('radio发生change事件，携带value值为：',e);
       let items = this.properties.propData.content;
       let value = e.detail.value;
@@ -41,9 +41,9 @@ Component({
         [selected]: -1,
       })
       // console.log('ckhecked--', this.data.propChecked)
-      this.triggerEvent('selectData', { id: e.currentTarget.dataset.id, value: e.detail.value })
+      this.triggerEvent('selectData', { id: e.currentTarget.dataset.id, value: e.detail.value });//触发事件，及参数
     },
-    getCode(index) {
+    _getCode(index) {
       var str = String.fromCharCode(index + 65);
       return str;
     }

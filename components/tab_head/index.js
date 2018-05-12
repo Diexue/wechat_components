@@ -52,17 +52,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    //item选择事件
     _selectTopic(e) {
       let index = e.currentTarget.dataset.index;
       let id=e.currentTarget.dataset.id
-      this.triggerEvent('selectTopic',{id:id,index:index})
+      this.triggerEvent('selectTopic', { id: id, index: index });//触发事件，及参数
       // console.log('look',index,id)
       this.setData({
         selectIndex: index
       })
     },
+    // 右侧add 的点击事件
     _addMore(e){
-      this.triggerEvent('addMore')
+      this.triggerEvent('addMore');//触发事件，及参数
     }
   }
 })

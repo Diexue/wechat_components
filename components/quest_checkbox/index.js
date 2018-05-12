@@ -24,7 +24,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    checkboxChange(e){
+    //
+    _checkboxChange(e){
       console.log('box',e);
       let items = this.properties.propData.content;
       let value=e.detail.value;
@@ -41,7 +42,7 @@ Component({
         [selected]: ["-1"],
       })
       console.log('data', this.data.propData.id,value, this.data.propData)
-      this.triggerEvent('selectData', { id: this.data.propData.id, value: value })
+      this.triggerEvent('selectData', { id: this.data.propData.id, value: value });//触发事件，及参数
     }
   }
 })

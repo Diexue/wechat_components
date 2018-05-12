@@ -1,4 +1,4 @@
-<checkbox-group bindchange="checkboxChange"id="{{propData.id}}">
+<checkbox-group bindchange="_checkboxChange"id="{{propData.id}}">
   <label class="checkbox-box" wx:for="{{propData.content}}" wx:key="{{item.value}}"wx:index="index">
     <view class="checkboxAZ">
       <checkbox value="{{index}}"checked="{{propChecked.checked}}"/> 
