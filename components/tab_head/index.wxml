@@ -1,10 +1,12 @@
 <!--导航栏组件-->
- <scroll-view class='navBar'scroll-x style='height:{{propData.height?propData.height:initData.height}}rpx;line-height:{{propData.height?propData.height:initData.height}}rpx;font-size:{{propData.fontSize?propData.fontSize:initData.fontSize}}rpx;background:{{propData.bg?propData.bg:initData.bg}}'>
-    <view class='navBox'wx:for="{{propData.data?propData.data:initData.data}}"wx:index="index"wx:key="{{index}}"bindtap="_selectTopic"data-index="{{index}}"data-id="{{item.id}}"style='color:{{selectIndex==index?(propData.activeColor?propData.activeColor:initData.activeColor):(propData.color?propData.color:initData.color)}};background:{{selectIndex==index?(propData.activeBgColor?propData.activeBgColor:initData.activeBgColor):(propData.bgColor?propData.bgColor:initData.bgColor)}}'>
+<view>
+ <scroll-view class='navBar'scroll-x style='height:{{propData.height?propData.height:initData.height}}rpx;line-height:{{propData.height?propData.height:initData.height}}rpx;font-size:{{propData.fontSize?propData.fontSize:initData.fontSize}}rpx;background:{{propData.bg?propData.bg:initData.bg}};'>
+    <view class='navBox'wx:for="{{propData.data?propData.data:initData.data}}"wx:index="index"wx:key="{{index}}"bindtap="_selectTopic"data-index="{{index}}"data-id="{{item.id}}"style='color:{{selectIndex==index?(propData.activeColor?propData.activeColor:initData.activeColor):(propData.color?propData.color:initData.color)}};background:{{selectIndex==index?(propData.activeBgColor?propData.activeBgColor:initData.activeBgColor):(propData.bgColor?propData.bgColor:initData.bgColor)}};width:calc((100% - {{propData.add_width?propData.add_width:initData.add_width}}rpx)/{{propData.showCount?propData.showCount:initData.showCount}})'>
     {{item.name}}
+      <!-- <view class='tab_bar'style="width:{{}}"></view> -->
     </view>
-    <view wx:if="{{propData.showAdd}}"bindtap="_addMore" class='right-add'style='height:{{propData.height?propData.height:initData.height}}rpx;line-height:{{propData.height?propData.height:initData.height}}rpx;background:{{propData.add_bg?propData.add_bg:initData.add_bg}};color:{{propData.add_color?propData.add_color:initData.add_color}};font-size:{{propData.add_fontSize?propData.add_fontSize:initData.add_fontSize}}rpx;'>
+  </scroll-view>
+   <view wx:if="{{propData.showAdd}}"bindtap="_addMore" class='right-add'style='height:{{propData.height?propData.height:initData.height}}rpx;line-height:{{propData.height?propData.height:initData.height}}rpx;background:{{propData.add_bg?propData.add_bg:initData.add_bg}};color:{{propData.add_color?propData.add_color:initData.add_color}};font-size:{{propData.add_fontSize?propData.add_fontSize:initData.add_fontSize}}rpx;width:{{propData.add_width?propData.add_width:initData.add_width}}rpx;margin-left:calc(100% - {{propData.add_width?propData.add_width:initData.add_width}}rpx);margin-top:-{{propData.height?propData.height:initData.height}}rpx;'>
       <view class='iconfont icon-add'>+</view>
     </view>
-
-  </scroll-view>
+</view>    

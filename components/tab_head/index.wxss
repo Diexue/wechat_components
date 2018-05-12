@@ -2,22 +2,18 @@
 .navBar{
   width: 100%;
   white-space: nowrap;
-  background:#fff; 
-  position: fixed;
-  top: 0;
   text-align: center;
   box-sizing: border-box;
 }
 .right-add{
-  position: fixed;
-  width: 80rpx;
-  z-index: 999;
-  top: 0;
-  right:0;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  /* margin-top: -80rpx;
+  margin-left:calc(100% - 80rpx); */
 }
 .navBox{
   display: inline-block;
-  width: 150rpx;
   overflow: hidden;
   box-sizing: border-box;
   text-align: center;

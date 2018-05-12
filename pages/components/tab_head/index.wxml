@@ -3,7 +3,4 @@
   <view class='list'>
     <tab id="tab"bindselectTopic="selectItem"bindaddMore="addMore" propData="{{tabData}}"></tab>
   </view>
-  <!-- <view class='list'>
-    <tab id="tab"propData="{{tabData}}"bindselectTopic="selectItem"></tab>
-  </view> -->
 </view>

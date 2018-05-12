@@ -8,15 +8,16 @@ Page({
     tabData:{
       data: [
         { name: "123", id: 0 },
-        { name: "黄兵", id: 0 },
+        { name: "黄兵黄兵", id: 0 },
         { name: "道君", id: 0 },
         { name: "叶凡", id: 0 },
         { name: "飞天", id: 0 },
         { name: "圣墟", id: 0 },
         { name: "遮天", id: 0 },
       ],
-      showAdd:true,
-      // activeColor:"green"
+      // showAdd:true,
+      // activeColor:"green",
+      showCount:5,
     }
   },
 
