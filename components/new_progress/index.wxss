@@ -1,0 +1,37 @@
+/* components/newProgress/index.wxss */
+.new-progress{
+  display: flex;
+  align-items: center;
+}
+.progress {
+   /* background:#ebebeb;  */
+  position: relative;
+  width: 90%;
+}
+.clearfix{
+  zoom: 0
+}
+.clearfix:after{
+  content:""; 
+  display: block; 
+  clear:both; 
+}
+.progress > .pro-column {
+  position:relative; 
+  float:left;
+  margin:0 -1px;
+  min-width:30px;
+  /* background:#cccccc;  */
+  /* border:1px solid;
+  border-color:#bfbfbf #b3b3b3 #9e9e9e; */
+  /* border-radius:10px; */
+  /* -webkit-box-shadow:inset 0 1px rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.2);
+  box-shadow:inset 0 1px rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.2); */
+}
+
+.pro-text{
+  flex: 1;
+  background: transparent;
+  text-align: right;
+}
+

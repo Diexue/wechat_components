@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "newpro":"/components/new_progress/index"
+  }
+}

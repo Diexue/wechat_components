@@ -1,1 +1,6 @@
 /* pages/api/index/index.wxss */
+.user-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}

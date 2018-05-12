@@ -1,17 +1,18 @@
-// pages/components/pass_lattice/index.js
+// pages/components/progress/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    passData:{
-      amount:[1,1,1,1,1,1],
-      interval:true,
-      // showNumber:true,
-      height:'88'
-    },
-
+    progressData:{
+      percent: 10,
+      height: 40,
+      activeColor: 'red',
+      radius: 40,
+      bgColor: '#ebebeb',
+      showPercent: false
+    }
   },
 
   /**
@@ -25,7 +26,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.pass=this.selectComponent('pass')
+    this.newpro=this.selectComponent('newpro')
   },
 
   /**
@@ -68,8 +69,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  getNumber(e){
-    console.log('code-->',e.detail.code)
   }
 })

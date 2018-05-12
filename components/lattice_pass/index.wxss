@@ -6,7 +6,7 @@
   flex-direction: row;
 }
 .box_border_left{
-  border-left: 1px solid #ccc;
+   border-left: 1px solid #ccc; 
 }
 .box_border{
   border: 1px solid #ccc;
@@ -16,7 +16,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
+}
+.list_interval{
   border: 1px solid #ccc;
+  margin-right: 10rpx;
+}
+.list_nointerval{
+  border-left: 1px solid #ccc;
 }
 .set_list:nth-of-type(1){
   border-left: none

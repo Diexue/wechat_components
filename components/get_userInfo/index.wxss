@@ -1,0 +1,27 @@
+/* components/getUserInfo/index.wxss */
+.mask_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(10, 10, 10, 0.5);
+}
+.get_box{
+  width: 80%;
+  height: 200rpx;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+.get_btn{
+  width: 80%;
+  margin: 0 auto;
+  background-color: #81cb8f;
+  margin-top: 30rpx;
+}

@@ -1,0 +1,4 @@
+<!--pages/components/progress/index.wxml-->
+<view class='progress-page'>
+  <newpro id="newpro"propData="{{progressData}}"></newpro>
+</view>

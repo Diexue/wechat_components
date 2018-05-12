@@ -1,2 +1,5 @@
 <!--pages/api/index/index.wxml-->
-<text>pages/api/index/index.wxml</text>
+  <button open-type="getUserInfo"bindgetuserinfo="getUserInfo">1212</button>
+<view>
+ <image src='{{userInfo.avatarUrl}}'class="user-img"></image>
+</view>

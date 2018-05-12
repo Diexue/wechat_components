@@ -1,0 +1,8 @@
+<!--components/getUserInfo/index.wxml-->
+<view class='getUserInfo'>
+  <view class='mask_bg'></view>
+  <view class='get_box'>
+    <view>检测到您未授权,是否进行授权</view>
+    <button class='get_btn' open-type="getUserInfo" bindgetuserinfo="getInfo">授权</button>
+  </view>
+</view>

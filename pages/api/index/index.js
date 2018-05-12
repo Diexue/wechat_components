@@ -62,5 +62,12 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  getUserInfo: function (e) {
+    console.log(e)
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
   }
 })

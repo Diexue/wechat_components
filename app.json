@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/api/index/index",
     "pages/components/pass_lattice/index",
-    "pages/components/tab_head/index"
+    "pages/components/tab_head/index",
+    "pages/components/progress/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
