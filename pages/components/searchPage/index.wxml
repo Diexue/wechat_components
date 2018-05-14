@@ -1,0 +1,20 @@
+<!--pages/components/searchPage/index.wxml-->
+<view class='search'>
+  <view class='searchBar'>
+    <view class='iconfont icon-sousuo'bindtap='search'></view>
+    <input class='search-input' placeholder='搜索'bindinput="searchValue"value="{{defaultValue}}"></input>
+    <view class='iconfont icon-cancle'bindtap='clearData'></view>
+  </view>
+  <view wx:if="{{defaultValue==''}}">
+    <view class='popularSearch'>热门搜索</view>
+    <view class='line'></view>
+    <view class='popular'>
+      <view class='popularList clearfix'wx:for="{{popularList}}"wx:index="index"wx:key="{{index}}"bindtap="selectList"data-value="{{item}}">
+        <view class="rank-num {{index > 2?'ccc':'ef5350'}}">{{index+1}}</view>
+        <view class='rank-text'>{{item}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

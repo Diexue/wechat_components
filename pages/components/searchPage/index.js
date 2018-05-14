@@ -1,38 +1,27 @@
-// pages/components/tab_head/index.js
+// pages/components/searchPage/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    tabData:{
-      data: [
-        { name: "123", id: 0 },
-        { name: "黄兵黄兵", id: 0 },
-        { name: "道君", id: 0 },
-        { name: "叶凡", id: 0 },
-        { name: "飞天", id: 0 },
-        { name: "圣墟", id: 0 },
-        { name: "遮天", id: 0 },
-      ],
-      showAdd:true,
-      // activeColor:"green",
-      showCount:5,
-    }
+    value: '',
+    defaultValue: "",
+    popularList: ["海澜之家", "腾讯", "新零售", "阿里巴巴", "A站"]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+  
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.tab=this.selectComponent('tab')
+  
   },
 
   /**
@@ -76,10 +65,35 @@ Page({
   onShareAppMessage: function () {
   
   },
-  selectItem(e){
-    console.log('item-->',e.detail.index)
+  searchValue(e) {
+    this.setData({
+      value: e.detail.value
+    })
   },
-  addMore(e){
-    console.log('点击了add')
+  search(e) {
+    console.log('dd', this.data.value)
+    let value = this.data.value;
+    // wx.request({
+    //   url: '',
+    //   data:"",
+    //   success(res){
+
+    //   }
+    // })
+  },
+  clearData() {
+    this.setData({
+      defaultValue: "",
+      value: ""
+    })
+  },
+  selectList(e) {
+    console.log('eee', e);
+    let value = e.currentTarget.dataset.value;
+    this.setData({
+      value: value,
+      defaultValue: value
+    })
+    this.search();
   }
 })

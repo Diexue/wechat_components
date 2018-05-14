@@ -16,6 +16,24 @@ Page({
     if (app.globalData.userInfo){
       this.setData({
         userInfo: app.globalData.userInfo
+      });
+      wx.getSetting({
+        success: res => {
+          console.log('res--->', res);
+          if (!res.authSetting['scope.werun']) {
+            wx.authorize({
+              scope: 'scope.werun',
+              success() {
+                // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+                wx.getWeRunData({
+                  success:res=>{
+                    console.log('步数',res)
+                  }
+                })
+              }
+            })
+          }
+        }
       })
     }else{
       this.setData({

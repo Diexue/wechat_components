@@ -1,0 +1,10 @@
+<!--pages/components/search/index.wxml-->
+<!--搜索页  -->
+<view class='search-page'>
+  <!-- <search id="search"></search> -->
+  <view class='searchBox'bindtap='goSearch'>
+    <view class='iconfont icon-sousuo'></view>
+    <view class='show_text'>大家都在搜</view>
+    <view class='iconfont icon-erweima right_icon'></view>
+  </view>
+</view>

@@ -7,7 +7,9 @@
     "pages/components/tab_head/index",
     "pages/components/progress/index",
     "pages/components/getInfo/index",
-    "pages/components/question/index"
+    "pages/components/question/index",
+    "pages/components/search/index",
+    "pages/components/searchPage/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

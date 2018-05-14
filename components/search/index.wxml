@@ -1,0 +1,6 @@
+<!--components/search/index.wxml-->
+<view class='searchBox'bindtap='_goSearch'>
+  <view class='iconfont icon-sousuo'></view>
+  <view class='show_text'>大家都在搜</view>
+  <view class='iconfont icon-erweima right_icon'></view>
+</view>

@@ -1,0 +1,66 @@
+/* pages/searchPage/index.wxss */
+@import'../../../iconfont/index.wxss';
+
+.search{
+  background: rgb(238,238,238);
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.searchBar{
+  margin: 0rpx 20rpx 14rpx;
+  display: flex;
+  border: 1px solid #efefef;
+  line-height: 80rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  padding: 0 18rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.search-input{
+  flex: 1;
+  font-size: 30rpx;
+  padding-left: 10rpx;
+  height: 80rpx;
+}
+.popularSearch{
+  font-size: 28rpx;
+  margin: 20rpx 20rpx 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.line{
+  width: 100%;
+  height: 2rpx;
+  background: rgb(216,216,216);
+}
+.popular{
+  margin: 0 20rpx;
+}
+.popularList{
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  font-size: 30rpx;
+}
+.rank-num{
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  border-radius: 50%;
+  text-align: center;
+  /* font-size: 28rpx; */
+  color: #fff;
+  float:left;
+}
+.ef5350{
+  background: #ef5350;
+}
+.ccc{
+  background: #ccc;
+}
+.rank-text{
+  float: left;
+  margin-left: 20rpx;
+}

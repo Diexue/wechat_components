@@ -22,5 +22,9 @@
       <view class='iconfont icon-lock'></view>
       <view class='list_text'>问答</view>
     </navigator> 
+    <navigator class='list' url='/pages/components/search/index'>
+      <view class='iconfont icon-lock'></view>
+      <view class='list_text'>搜索</view>
+    </navigator> 
   </view>
 </view>
