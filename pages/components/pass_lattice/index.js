@@ -18,16 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var a = ['A', 'B', 'C']
-    wx.showActionSheet({
-      itemList: a,
-      success: function (res) {
-        console.log('select',a[res.tapIndex])
-      },
-      fail: function (res) {
-        console.log(res.errMsg)
-      }
-    })
+   
   },
 
   /**

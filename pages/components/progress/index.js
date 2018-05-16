@@ -1,4 +1,5 @@
 // pages/components/progress/index.js
+const util=require('../../../utils/util.js')
 Page({
 
   /**
@@ -19,7 +20,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    util.loading({title:'正在加载'})
+    console.log('ss',util.hideLoading)
+    setTimeout(function () {
+      // wx.hideLoading()
+      util.hideLoading()
+    }, 2000)
+ 
   },
 
   /**

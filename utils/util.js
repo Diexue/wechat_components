@@ -25,7 +25,7 @@ function formate(value) {
   }
   return value;
 }
-const warning = (obj,callback)=>{
+const warning = (obj,trigger)=>{
   return wx.showModal({
     title: obj.title,
     content: obj.content,
@@ -36,9 +36,9 @@ const warning = (obj,callback)=>{
     confirmColor: obj.confirmColor ? obj.confirmColor: '#3CC51F',//确认按钮的颜色
     success:res=>{
       if(res.confirm){
-        callback(bool)
+        trigger(bool)
       }else if(res.cancel){
-        callback(!bool)
+        trigger(!bool)
       }
     },
     fail:res=>{
@@ -49,8 +49,38 @@ const warning = (obj,callback)=>{
     }
   })
 }
+//消息提示
+const toast = (obj,trigger)=>{
+  return wx.showToast({
+    title: obj.title ? obj.title : '',//提示内容
+    icon:obj.icon?obj.icon:'none',//提示图标
+    image:obj.image?obj.image:'',//自定义本地图片，优先级高于icon
+    duration:obj.duration?obj.duration:1500,//提示延迟时间，默认1500
+    mask:obj.mask?obj.mask:false,//是否显示透明蒙层，防止触摸穿透，默认false
+    success:res=>{
+      trigger()
+    },
+    fail:res=>{
+      console.log('fail-->')
+    }
+  })
+}
+
+const loading=(obj,trigger)=>{
+  return wx.showLoading({
+    title: obj.title?obj.title:'',
+    mask:obj.mask?obj.mask:false,
+    success:res=>{
+      if(trigger) trigger()
+    }
+  })
+}
+const hideLoading=()=>{ wx.hideLoading() }
 module.exports = {
   formatTime: formatTime,
   countFormate,
-  warning
+  warning,
+  toast,
+  loading,
+  hideLoading
 }
