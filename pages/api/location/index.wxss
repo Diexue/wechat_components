@@ -1,0 +1,8 @@
+/* pages/api/location/index.wxss */
+.lo-box{
+  display: flex;
+  align-items: center;
+}
+.lo-list{
+  flex: 1;
+}

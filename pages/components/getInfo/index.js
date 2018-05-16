@@ -1,5 +1,5 @@
 // pages/components/getInfo/index.js
-const app=getApp()
+const app = getApp()
 Page({
 
   /**
@@ -19,15 +19,15 @@ Page({
       });
       wx.getSetting({
         success: res => {
-          console.log('res--->', res);
           if (!res.authSetting['scope.werun']) {
             wx.authorize({
               scope: 'scope.werun',
               success() {
-                // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+                // 用户已经同意小程序使用微信步数功能，后续调用 wx.startRecord 接口不会弹窗询问
                 wx.getWeRunData({
                   success:res=>{
                     console.log('步数',res)
+                    const encryptedData = res.encryptedData
                   }
                 })
               }
@@ -91,7 +91,7 @@ Page({
   
   },
   get_UserInfo(e){
-    console.log('用户信息',e.detail.userInfo);
+    console.log('用户信息',e,e.detail.userInfo);
     let userInfo = e.detail.userInfo
     app.globalData.userInfo = userInfo
     this.setData({

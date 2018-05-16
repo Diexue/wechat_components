@@ -5,7 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    defaultData:[
+      { name: "密码格子", icon: "icon-lock", url: "pass_lattice" },
+      { name: "tab列表", icon: "icon-lock", url: "tab_head" },
+      { name: "进度条", icon: "icon-lock", url: "progress" },
+      { name: "获取头像等信息", icon: "icon-lock", url: "getInfo" },
+      { name: "问答", icon: "icon-lock", url: "question" },
+      { name: "搜索", icon: "icon-lock", url: "search" },
+      { name: "地图", icon: "icon-lock", url: "map" },
+      // { name: "", icon: "icon-lock", url: "" },
+      // { name: "", icon: "icon-lock", url: "" },
+
+    ]
   },
 
   /**

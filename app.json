@@ -9,7 +9,10 @@
     "pages/components/getInfo/index",
     "pages/components/question/index",
     "pages/components/search/index",
-    "pages/components/searchPage/index"
+    "pages/components/searchPage/index",
+    "pages/api/uploadFile/index",
+    "pages/components/map/index",
+    "pages/api/location/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

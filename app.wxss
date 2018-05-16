@@ -1,2 +1,5 @@
 /**app.wxss**/
-@import './iconfont/index.wxss'
+@import './iconfont/index.wxss';
+page{
+  background: rgb(245, 245, 245)
+}

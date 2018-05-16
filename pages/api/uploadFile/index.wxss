@@ -1,0 +1,8 @@
+/* pages/api/uploadFile/index.wxss */
+.head_img{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  background: #ccc;
+  border: 1px solid #ccc;
+}

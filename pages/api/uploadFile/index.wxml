@@ -1,0 +1,2 @@
+<!--pages/api/uploadFile/index.wxml-->
+<image class='head_img' src='{{userInfo.avatarUrl}}'bindtap="changeImage"></image>

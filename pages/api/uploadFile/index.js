@@ -1,14 +1,11 @@
-// pages/api/index/index.js
+// pages/api/uploadFile/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    defaultData:[
-      { name: "文件上传", icon: "icon-lock", url: "uploadFile" },
-      { name: "位置", icon: "icon-lock", url: "location" },
-    ]
+  
   },
 
   /**
@@ -66,11 +63,22 @@ Page({
   onShareAppMessage: function () {
   
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  changeImage(e){
+    wx.chooseImage({
+      success: function(res) {
+        var tempFilePaths = res.tempFilePaths;
+        console.log('tempFilePaths-->', tempFilePaths)
+        // const uploadTask = wx.uploadFile({
+        //   url: '',//开发者服务器
+        //   filePath: tempFilePaths[0],
+        //   name: 'file',
+        // })
+        // uploadTask.onProgressUpdate(res=>{
+        //   console.log('上传进度', res.progress)
+        //   console.log('已经上传的数据长度', res.totalBytesSent)
+        //   console.log('预期需要上传的数据总长度', res.totalBytesExpectedToSend)
+        // })
+      },
     })
   }
 })

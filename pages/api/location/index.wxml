@@ -1,0 +1,8 @@
+<!--pages/api/location/index.wxml-->
+<view class='location-page'>
+  <view class='lo-box'>
+    <view class='lo-list'>选择的位置:{{location.address}}</view>
+    <view class='iconfont icon-lock' bindtap='selectLocation'></view>
+  </view>
+
+</view>

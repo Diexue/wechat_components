@@ -1,4 +1,5 @@
 // pages/components/tab_head/index.js
+const util=require('../../../utils/util.js')
 Page({
 
   /**
@@ -25,7 +26,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    util.warning({ title: 'kdsak', content: 'sdsjadj', cancelColor: '#ef5350',cancelText:"12"},this.show)
   },
 
   /**
@@ -81,5 +82,12 @@ Page({
   },
   addMore(e){
     console.log('点击了add')
+  },
+  show(bool){
+    if(bool){
+      console.log('点击了确定', bool)
+    }else{
+      console.log('点击了取消', bool)
+    }
   }
 })

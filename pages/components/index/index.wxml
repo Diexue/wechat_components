@@ -2,29 +2,9 @@
 <view class="index-page">
   <view class='head'>组件拼装</view>
   <view class="box">
-    <navigator class='list' url='/pages/components/pass_lattice/index'>
-      <view class='iconfont icon-lock'></view>
-      <view class='list_text'>密码格子</view>
-    </navigator> 
-    <navigator class='list' url='/pages/components/tab_head/index'>
-      <view class='iconfont icon-lock'></view>
-      <view class='list_text'>tab列表</view>
-    </navigator> 
-    <navigator class='list' url='/pages/components/progress/index'>
-     <view class='iconfont icon-lock'></view>
-      <view class='list_text'>进度条</view>
-    </navigator>
-    <navigator class='list' url='/pages/components/getInfo/index'>
-      <view class='iconfont icon-lock'></view>
-      <view class='list_text'>获取头像等信息</view>
-    </navigator>
-    <navigator class='list' url='/pages/components/question/index'>
-      <view class='iconfont icon-lock'></view>
-      <view class='list_text'>问答</view>
-    </navigator> 
-    <navigator class='list' url='/pages/components/search/index'>
-      <view class='iconfont icon-lock'></view>
-      <view class='list_text'>搜索</view>
+    <navigator wx:for="{{defaultData}}" class='list' url='/pages/components/{{item.url}}/index'>
+      <view class='iconfont {{item.icon}}'></view>
+      <view class='list_text'>{{item.name}}</view>
     </navigator> 
   </view>
 </view>
