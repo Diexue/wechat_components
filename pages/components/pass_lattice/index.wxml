@@ -1,4 +1,27 @@
 <!--pages/components/pass_lattice/index.wxml-->
 <view class='pass-page'>
   <pass id="pass"propData="{{passData}}"bindgetCode="getNumber"></pass>
+
 </view>
+<scroll-view scroll-x scroll-y> 
+  <view style='background:yellow;width:{{cwidth}}px;height:{{cheight}}px'bindtouchmove='move' bindtap='click'bindtouchend='end'
+>
+     <view 
+        class='iconfont icon-zhongguoditu'
+        style='font-size:{{fontSize}}px;color:#ef5350'>
+    </view>
+    <view wx:for="{{svgData}}"wx:index="index" style='position:absolute;top:{{newScale?item.y*newScale:item.y}}px;left:{{newScale?newScale*item.x:item.x}}px'>
+      <view class='iconfont {{item.icon}}'style='font-size:{{newScale?newScale*100:100}}px'></view>
+    </view>
+  </view>  
+    <!-- <view style='margin-top:-300px;display:block'>
+      <view bindtouchstart='start'
+          bindtouchmove='move'
+          bindtouchend='end'
+          bindtap='click'
+          class='iconfont icon-zhongguoditu'
+          style='font-size:36px;color:#000；'>
+      </view>
+    </view> -->
+    
+   </scroll-view> 

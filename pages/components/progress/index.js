@@ -13,6 +13,9 @@ Page({
       radius: 40,
       bgColor: '#ebebeb',
       showPercent: false
+    },
+    someData:{
+      title:"测试的小程序"
     }
   },
 
@@ -23,10 +26,13 @@ Page({
     util.loading({title:'正在加载'})
     console.log('ss',util.hideLoading)
     setTimeout(function () {
-      // wx.hideLoading()
       util.hideLoading()
     }, 2000)
- 
+    wx.getSystemInfo({
+      success: res => {
+        console.log('res-->', res)
+      }
+    })
   },
 
   /**
@@ -76,5 +82,8 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  go(e){
+
   }
 })

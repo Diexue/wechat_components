@@ -1,0 +1,8 @@
+<!--pages/components/movable/index.wxml-->
+<movable-area style="width:100vw;height:100vh;">
+  <movable-view direction="all"inertia scale bindchange="change"bindscale="scale"style='width:100%'>
+    <scroll-view scroll-x style='width:100%; white-space: nowrap;'>
+      <view wx:for="{{listData}}" class='list'>{{item}}</view>
+    </scroll-view>
+  </movable-view>
+</movable-area>

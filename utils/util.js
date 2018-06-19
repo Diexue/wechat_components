@@ -26,9 +26,10 @@ function formate(value) {
   return value;
 }
 const warning = (obj,trigger)=>{
+  // trigger为触发函数，点击确认时返回true，反之为false
   return wx.showModal({
-    title: obj.title,
-    content: obj.content,
+    title: obj.title?obj.title:"",
+    content: obj.content ? obj.content:"",
     showCancel: !obj.showCancel ? obj.showCancel : true,//是否显示取消按钮
     cancelText: obj.cancelText ? obj.cancelText : '取消',//取消按钮的文字
     cancelColor: obj.cancelColor ? obj.cancelColor: '#000000',//取消按钮的颜色
@@ -75,6 +76,21 @@ const loading=(obj,trigger)=>{
     }
   })
 }
+function unique(oldArr) {
+  var allArr = [];//新数组
+  for (var i = 0; i < oldArr.length; i++) {
+    var flag = true;
+    for (var j = 0; j < allArr.length; j++) {
+      if (oldArr[i].id == allArr[j].id) {
+        flag = false;
+      };
+    };
+    if (flag) {
+      allArr.push(oldArr[i]);
+    };
+  };
+  return allArr
+}
 const hideLoading=()=>{ wx.hideLoading() }
 module.exports = {
   formatTime: formatTime,
@@ -82,5 +98,6 @@ module.exports = {
   warning,
   toast,
   loading,
-  hideLoading
+  hideLoading,
+  unique
 }

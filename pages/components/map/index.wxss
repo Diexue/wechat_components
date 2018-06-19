@@ -1,1 +1,22 @@
 /* pages/components/map/index.wxss */
+.mag-box{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative
+}
+.big{
+  /* animation: change 2s linear forwards; */
+  width: 100%;
+  height: 200px;
+}
+@keyframes change{
+  0%{
+    width: 100%;
+    height: 200px
+  }
+  100%{
+    width: 300%;
+    height: 600px
+  }
+}

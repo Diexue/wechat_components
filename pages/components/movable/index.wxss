@@ -1,0 +1,6 @@
+/* pages/components/movable/index.wxss */
+.list{
+  display: inline-block;
+  width: 180rpx;
+  text-align: center;
+}

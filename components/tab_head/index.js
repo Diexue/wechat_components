@@ -47,6 +47,10 @@ Component({
     this.setData({
       [add_width]: this.properties.propData.showAdd?80:0
     })
+    
+  },
+  ready(){
+    this._getBox()
   },
   /**
    * 组件的方法列表
@@ -65,6 +69,17 @@ Component({
     // 右侧add 的点击事件
     _addMore(e){
       this.triggerEvent('addMore');//触发事件，及参数
+    },
+    _getBox(){
+      var query=wx.createSelectorQuery().in(this);
+      console.log('a-->',query)
+      query.select('#box').boundingClientRect();
+      query.exec(res=> {
+        console.log('box-->', res)
+      })
+      // query.select('#box').boundingClientRect(function(res){
+      //   console.log('dad-->',res)
+      // }).exec()
     }
   }
 })

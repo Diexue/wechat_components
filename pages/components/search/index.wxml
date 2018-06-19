@@ -7,4 +7,8 @@
     <view class='show_text'>大家都在搜</view>
     <view class='iconfont icon-erweima right_icon'></view>
   </view>
+  <view>
+    <moveImg id="moveImg"></moveImg>
+  </view>
+  <image class='img'bindtouchstart="start"bindtouchmove="move"bindtouchend="end" src="/images/head.png"></image>
 </view>

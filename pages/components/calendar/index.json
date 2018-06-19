@@ -1,0 +1,5 @@
+{
+  "usingComponents":{
+    "calendars": "/components/calendars/index"
+  }
+}

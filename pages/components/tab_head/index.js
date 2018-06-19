@@ -26,7 +26,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    util.warning({ title: 'kdsak', content: 'sdsjadj', showCancel:false, cancelColor: '#ef5350',cancelText:"12"},this.show)
+    util.warning({ title: 'kdsak', content: 'sdsjadj', cancelColor: '#ef5350',cancelText:"退出"},this.show)
+ 
   },
 
   /**

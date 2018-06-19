@@ -105,7 +105,7 @@ Page({
     }
   },
   lastQuestion() {
-    data = this.unique(data)
+    data = util.unique(data)
     console.log('lastnew', data)
     if (this.data.count > 0) {
       this.setData({
@@ -126,7 +126,7 @@ Page({
     console.log('last--->', this.data.hasSelect)
   },
   nextQuestion() {
-    data = this.unique(data)
+    data = util.unique(data)
     console.log('nextnew', data, this.data.count)
     let percentNum;
     //必须答完前一题才能继续下一题
@@ -158,21 +158,7 @@ Page({
     })
 
   },
-  unique(oldArr) {
-    var allArr = [];//新数组
-    for (var i = 0; i < oldArr.length; i++) {
-      var flag = true;
-      for (var j = 0; j < allArr.length; j++) {
-        if (oldArr[i].id == allArr[j].id) {
-          flag = false;
-        };
-      };
-      if (flag) {
-        allArr.push(oldArr[i]);
-      };
-    };
-    return allArr
-  },
+ 
   postAnswer() {
     let time = this.data.pageTime
     let that = this

@@ -10,7 +10,7 @@ Page({
       longitude: 113.324520,
       latitude: 23.099994,
       scale:16,
-      markers: [{ latitude: 23.099994, longitude: 113.324520}],
+      markers: [{ latitude: 23.099994, longitude: 113.324520,scale:5}],
       // covers: [{
       //   latitude: 23.099994,
       //   longitude: 113.344520
@@ -55,6 +55,23 @@ Page({
     //     }
     //   }
     // })
+    let scale='mapData.scale'
+    let a = 5
+    this.setTimeout=setTimeout(()=>{
+      this.setData({
+        [scale]: 15
+      })
+    },2000)
+    // let change=setInterval(()=>{
+    //   a=a+0.5
+    //   console.log('a-->a',a)
+    //   this.setData({
+    //     [scale]:parseInt(a)
+    //   })
+    //   if(a>=16){
+    //     clearInterval(change)
+    //   }
+    // },200)
   },
 
   /**

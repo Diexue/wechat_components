@@ -1,0 +1,44 @@
+<!--components/calendar2/index.wxml-->
+<view class='box1' style='width: {{ sysW * 7 }}rpx'>
+  <view class='flex'>
+    <view class='flex-btn'bindtap="_change"data-map="del">-</view>
+    <view class='flex-list'>{{ year }}年{{month}}月</view>
+    <view class='flex-btn'bindtap="_change"data-map="add">+</view>
+  </view>
+  <!-- <view class='dateBox'>{{ year }} - {{ month}}</view> -->
+  <block wx:for='{{ weekArr }}'>
+    <view style='width: {{ sysW }}rpx; height: {{ sysW }}rpx; line-height: {{ sysW }}rpx;'>{{ item }}</view>
+  </block>
+  <block wx:for='{{ arr }}'wx:index="index">
+    <view bindtap='_select'data-date="{{item}}"data-month="{{month}}"data-year="{{year}}" style='{{ index == 0 ? "margin-left:" + sysW * marLet + "rpx;" : "" }}width: {{ sysW }}rpx; height: {{ sysW }}rpx; line-height: {{ sysW }}rpx;color:{{result.checkMin(item,year,month,today.year,today.month,today.date)?(showprecolor?precolor:""):""}}' class='{{month==clickMonth1&&scount==1?(item == clickItem1?"dateStart":""):(scount==2?(clickMonth==clickMonth1?(month==clickMonth1&&item==result.checkSize(clickItem,clickItem1,"min")?"dateStart":month==clickMonth1&&item==result.checkSize(clickItem,clickItem1,"max")?"dateEnd":result.checkSize(clickItem,clickItem1,"max")>item&&result.checkSize(clickItem,clickItem1,"min")<item&&month==clickMonth1?"dateSelect":""):clickMonth1<clickMonth?(month==clickMonth1&&item==clickItem1?"dateStart":month==clickMonth1&&item>clickItem1?"dateSelect":""||month==clickMonth&&item==clickItem?"dateEnd":month==clickMonth&&item<clickItem?"dateSelect":""):(month==clickMonth&&item==clickItem?"dateStart":month==clickMonth&&item>clickItem?"dateSelect":""||month==clickMonth1&&item==clickItem1?"dateEnd":month==clickMonth1&&item<clickItem1?"dateSelect":"")):"")}} '>{{ item }}</view>
+  </block>
+</view>
+<wxs module="result">
+  var checkMin=function(item,year,month,tyear,tmonth,tdate){
+    var condition = year<tyear||year==tyear&&month<tmonth||year==tyear&&month==tmonth&&item<tdate
+    return condition;
+  }
+  var checkSize=function(a,b,max){
+    if(max=='max'){value=a>b?a:b}
+    if(max=='min'){value=a<b?a:b}  
+  return value;
+  }
+  var checkMonth=function(clickMonth,clickMonth1,clickItem,clickItem1,max){
+    if(max=='max'){
+     var maxMonth=clickMonth>clickMonth1?clickMonth:clickMonth1;
+    }
+    if(max=='min'){
+      maxMonth=clickMonth<clickMonth1?clickMonth:clickMonth1; 
+    }
+    var maxDate=maxMonth==clickMonth?clickItem:clickItem1;
+    return [maxMonth,maxDate];
+    /*
+    //两日期位于同一月份时判断两日期大小重新赋予dateStart和dateEnd
+    //两日期位于两个不同月份时，根据月份大小重新赋予dateStart和dateEnd，其中clickMonth1为第一次点击月份，clickMonth为第二次点击的月份
+    clickMonth1<clickMonth?(month==clickMonth1&&item==clickItem1?"dateStart":month==clickMonth1&&item>clickItem1?"dateSelect":""||month==clickMonth&&item==clickItem?"dateEnd":month==clickMonth&&item<clickItem?"dateSelect":""):(month==clickMonth&&item==clickItem?"dateStart":month==clickMonth&&item>clickItem?"dateSelect":""||month==clickMonth1&&item==clickItem1?"dateEnd":month==clickMonth1&&item<clickItem1?"dateSelect":"")
+    */
+  }
+  module.exports.checkMin=checkMin;
+  module.exports.checkSize=checkSize;
+  module.exports.checkMonth=checkMonth;
+</wxs>

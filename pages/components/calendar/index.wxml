@@ -1,0 +1,2 @@
+<view>日历2</view>
+<calendars id="calendars"propData="{{calendarData}}"></calendars>

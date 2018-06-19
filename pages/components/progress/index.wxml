@@ -1,4 +1,9 @@
 <!--pages/components/progress/index.wxml-->
 <view class='progress-page'>
   <newpro id="newpro"propData="{{progressData}}"></newpro>
+  <navigator target="miniProgram"open-type="navigate"
+            app-id="wx07a64f61fece4270"
+            extra-data="{{someData}}"
+            version="trial"
+            path="/pages/index/index">跳转小程序</navigator>
 </view>

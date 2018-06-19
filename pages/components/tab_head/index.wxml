@@ -3,4 +3,5 @@
   <view class='list'>
     <tab id="tab"bindselectTopic="selectItem"bindaddMore="addMore" propData="{{tabData}}"></tab>
   </view>
+  <view id="sd">123</view>
 </view>

@@ -22,7 +22,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.search=this.selectComponent('search')
+    this.search=this.selectComponent('search');
   },
 
   /**
@@ -73,5 +73,14 @@ Page({
   },
   show(){
     console.log('触发')
+  },
+  start(e){
+    console.log('e1->',e)
+  },
+  move(e){
+    console.log('e2->',e)
+  },
+  end(e){
+    console.log('e3->',e)
   }
 })

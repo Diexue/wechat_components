@@ -12,7 +12,9 @@
     "pages/components/searchPage/index",
     "pages/api/uploadFile/index",
     "pages/components/map/index",
-    "pages/api/location/index"
+    "pages/api/location/index",
+    "pages/components/movable/index",
+    "pages/components/calendar/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
