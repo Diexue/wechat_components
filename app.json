@@ -1,20 +1,7 @@
 {
   "pages": [
-    "pages/components/index/index",
-    "pages/logs/logs",
-    "pages/api/index/index",
-    "pages/components/pass_lattice/index",
-    "pages/components/tab_head/index",
-    "pages/components/progress/index",
-    "pages/components/getInfo/index",
-    "pages/components/question/index",
-    "pages/components/search/index",
-    "pages/components/searchPage/index",
-    "pages/api/uploadFile/index",
-    "pages/components/map/index",
-    "pages/api/location/index",
-    "pages/components/movable/index",
-    "pages/components/calendar/index"
+    "pages/tabBar/components/index",
+    "pages/tabBar/api/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,17 +14,41 @@
     "selectedColor": "#81cb8f",
     "list": [
       {
-        "pagePath": "pages/components/index/index",
+        "pagePath": "pages/tabBar/components/index",
         "text": "首页",
         "iconPath": "images/index-off.png",
         "selectedIconPath": "images/index-select.png"
       },
       {
-        "pagePath": "pages/api/index/index",
+        "pagePath": "pages/tabBar/api/index",
         "text": "api",
         "iconPath": "images/index-off.png",
         "selectedIconPath": "images/index-select.png"
       }
     ]
-  }
+  },
+  "subPackages":[
+    {
+      "root":"pages/components/",
+      "pages":[
+        "pass_lattice/index",
+        "tab_head/index",
+        "progress/index",
+        "getInfo/index",
+        "question/index",
+        "search/index",
+        "searchPage/index",
+        "map/index",
+        "movable/index",
+        "calendar/index"
+      ]
+    },
+    {
+      "root":"pages/api/",
+      "pages":[
+        "location/index",
+        "uploadFile/index"
+      ]
+    }
+  ]
 }
