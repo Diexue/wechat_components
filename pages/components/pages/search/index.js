@@ -1,6 +1,6 @@
 // pages/components/search/index.js
 
-const util=require('../../../utils/util.js')  
+const util=require('../../../../utils/util.js')  
 
 Page({
 
@@ -68,7 +68,7 @@ Page({
   },
   goSearch(){
     wx.navigateTo({
-      url: '/pages/components/searchPage/index',
+      url: '/pages/components/pages/searchPage/index',
     })
   },
   show(){

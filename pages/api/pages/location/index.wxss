@@ -1,4 +1,5 @@
 /* pages/api/location/index.wxss */
+@import "../../../../iconfont/index.wxss";
 .lo-box{
   display: flex;
   align-items: center;

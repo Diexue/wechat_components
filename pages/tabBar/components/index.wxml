@@ -2,7 +2,7 @@
 <view class="index-page">
   <view class='head'>组件拼装</view>
   <view class="box">
-    <navigator wx:for="{{defaultData}}" class='list' url='/pages/components/{{item.url}}/index'>
+    <navigator wx:for="{{defaultData}}" class='list' url='/pages/components/pages/{{item.url}}/index'>
       <view class='iconfont {{item.icon}}'></view>
       <view class='list_text'>{{item.name}}</view>
     </navigator> 

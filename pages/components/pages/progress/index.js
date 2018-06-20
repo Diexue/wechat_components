@@ -1,5 +1,5 @@
 // pages/components/progress/index.js
-const util=require('../../../utils/util.js')
+const util=require('../../../../utils/util.js')
 Page({
 
   /**

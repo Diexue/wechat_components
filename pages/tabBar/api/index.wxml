@@ -4,7 +4,7 @@
  <image src='{{userInfo.avatarUrl}}'class="user-img"></image>
 </view> -->
 <view class='box'>
-  <navigator wx:for="{{defaultData}}" class='list' url='/pages/api/{{item.url}}/index'>
+  <navigator wx:for="{{defaultData}}" class='list' url='/pages/api/pages/{{item.url}}/index'>
     <view class='iconfont {{item.icon}}'></view>
     <view class='list_text'>{{item.name}}</view>
   </navigator> 

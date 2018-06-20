@@ -6,7 +6,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "组件拼装",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -29,7 +29,7 @@
   },
   "subPackages":[
     {
-      "root":"pages/components/pages",
+      "root":"pages/components/pages/",
       "pages":[
         "pass_lattice/index",
         "tab_head/index",
@@ -44,7 +44,7 @@
       ]
     },
     {
-      "root":"pages/api/pages",
+      "root":"pages/api/pages/",
       "pages":[
         "location/index",
         "uploadFile/index"

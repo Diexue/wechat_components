@@ -49,3 +49,6 @@
 .flex-btn{
   width: 100rpx
 }
+.list-m{
+  margin-top: 8px;
+}

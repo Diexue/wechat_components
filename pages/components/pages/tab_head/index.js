@@ -1,5 +1,5 @@
 // pages/components/tab_head/index.js
-const util=require('../../../utils/util.js')
+const util=require('../../../../utils/util.js')
 Page({
 
   /**

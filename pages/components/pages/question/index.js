@@ -1,6 +1,6 @@
 // pages/components/question/index.js
-const util = require('../../../utils/util.js');
-const testData = require('../../../utils/data.js');
+const util = require('../../../../utils/util.js');
+const testData = require('../../../../utils/data.js');
 const app = getApp()
 const checked = 'hasSelect.checked';
 var percent = 'progressData.percent';

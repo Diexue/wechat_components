@@ -1,5 +1,5 @@
 // pages/components/pass_lattice/index.js
-const util = require('../../../utils/util.js');
+const util = require('../../../../utils/util.js');
 
 var olddistance = 0;  //这个是上一次两个手指的距离  
 var newdistance;      //本次两手指之间的距离，两个一减咱们就知道了滑动了多少，以及放大还是缩小（正负嘛）  

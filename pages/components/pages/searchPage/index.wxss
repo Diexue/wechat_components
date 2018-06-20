@@ -1,5 +1,5 @@
 /* pages/searchPage/index.wxss */
-@import'../../../iconfont/index.wxss';
+/* @import'../../../iconfont/index.wxss'; */
 
 .search{
   background: rgb(238,238,238);

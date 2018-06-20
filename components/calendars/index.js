@@ -75,23 +75,6 @@ Component({
         firstDay: new Date(year, month, 1).getDay(), //第一天星期几
         arr:arr,
       })
-  
-      // //获取现今年份
-      // this.data.year = year;
-
-      // //获取现今月份
-      // this.data.month = months;
-
-      // //获取今日日期
-      // this.data.getDate = date.getDate();
-
-      // //最后一天是几号
-      // var d = new Date(year, months, 0);
-      // this.data.lastDay = d.getDate();
-
-      // //第一天星期几
-      // let firstDay = new Date(year, month, 1);
-      // this.data.firstDay = firstDay.getDay();
     },
     _change(e){
       let map=e.currentTarget.dataset.map;
